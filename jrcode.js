@@ -11,23 +11,16 @@ var seccion1 = document.querySelector(".seccion1")
 btnEncriptar.onclick = encriptar;
 btnDesencriptar.onclick = desencriptar;
 
+
 function validarMensaje(){
-    var area = recuperarTexto();
-    var letrasNoValidas = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ´ ";
-    var letrasValidas = "abcdefghijklmnñopqrsteuvwxyz ";
-     for (letras of area){
-        if (area == letrasNoValidas){
-            resultado = area(".area");
-            return alert("error");
-        }
-        
-        else if(resultado == letrasValidas){
-            return resultado;
-        }
-        
+    let area = document.querySelector(".area").value;
+    let validador = area.match(/^[a-z]*$/);
+
+    if(!validador || validador === 0) {
+        alert("Solo son permitidas letras minúsculas y sin acentos")
+        location.reload();
+        return true;
     }
-    
-    return resultado;
 }
 
 function encriptar(){
@@ -48,7 +41,8 @@ function desencriptar(){
 
 btnCopiar.addEventListener("click", copiar = () => {
 var contenido = document.querySelector("#resultado").textContent;
-navigator.clipboard.writeText(contenido);});
+navigator.clipboard.writeText(contenido); 
+alert("texto copiado")});
 
 function recuperarTexto(){
     var area = document.querySelector(".area");
