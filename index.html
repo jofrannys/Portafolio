@@ -17,20 +17,21 @@
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar" class="fa fa-bars"></label>
         <nav class="navbar">
-            <a href="#inicio">inicio</a>
-            <a href="#acerca_de">sobre mi</a>
-            <a href="#formacion">formacion</a>
-            <a href="#habilidades">habilidades</a>
-            <a href="#proyectos">proyectos</a>
-            <a href="#contactos">contactos</a>
+            <a href="#inicio" style="--i:1;">inicio</a>
+            <a href="#acerca_de" style="--i:2;">sobre mi</a>
+            <a href="#formacion" style="--i:3;">formacion</a>
+            <a href="#habilidades" style="--i:4;">habilidades</a>
+            <a href="#proyectos" style="--i:5;">proyectos</a>
+            <a href="#contactos" style="--i:6;">contactos</a>
         </nav>
     </header>
+    <!--icono flotante--->
         <a href="mailTo:jofrannysarcila@gmail.com" aria-label="Enviar mensaje al correo"
             class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm"><i class="fa-solid fa-envelope"></i></a>
   
     <section class="inicio" id="inicio">
         <div class="content">
-            <h3>hola, soy <br><span>Jofrannys Arcila</span> </h3>
+            <h3>hola, soy <br><span class="multiText"></span> </h3>
             <p>Desarrollador web Front-End, apasionado por la tecnologia, siempre con visión hacía el futuro</p>
             <nav class="nav">
                 <h4 class="sm-header">Mis Redes Sociales</h4>
@@ -415,7 +416,7 @@
             &copy, copyright @ 2023 Jofrannys Arcila
         </h1>
     </div>
-
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -98,6 +98,8 @@ header{
 header .logo{
     font-size: 2rem;
     color: var(--verde);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 header .logo span{
@@ -108,6 +110,10 @@ header .navbar a{
     font-size: 1.8rem;
     margin-left: 2rem;
     color: var(--verde);
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 header .navbar a:hover{
@@ -137,27 +143,54 @@ header label{
 .inicio .image{
     border-radius: 50%;
     background: var(--degradado);
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .inicio .image img{
     width: 40vh;
-    animation: float 3s linear infinite;
+    animation:  float 3s linear infinite;
+    animation-delay: 1s;
     border-radius: 50%;
 }
 @keyframes float {
-    0%, 100%{
-        transform: translateY(0rem);
+    0%{
+        transform: translateY(0);
+     
     }
+
     50%{
-        transform: translateY(-3.5rem);
+        transform: translateY(-24px);
+       
     }
+
+    100%{
+        transform: translateY(0);
+        
+    }
+}
     
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .inicio .content h3{
     font-size: 5.5rem;
     color: rgb(210, 228, 241);
     text-transform: uppercase;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: 1s;
 
 }
 .inicio .content h3 span{
@@ -169,6 +202,9 @@ header label{
     font-size: 1.7rem;
     color: #666;
     padding: 1rem 0;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 
 }
 .nav {
@@ -189,6 +225,9 @@ header label{
     text-transform: uppercase;
     cursor: pointer;
     pointer-events: auto;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
   }
 .line {
     width: 6rem;
@@ -622,7 +661,68 @@ header label{
 }
 
 
+/* KEYFRAMES ANIMATION*/
 
+@keyframes zoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBotton{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
